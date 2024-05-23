@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична 9</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Планувальник подорожей</h1>
+        <form id="travel-form">
+            <label for="destination">Місце призначення:</label>
+            <input type="text" id="destination" name="destination" required>
+            
+            <label for="num-people">Кількість осіб:</label>
+            <input type="number" id="num-people" name="num-people" min="0" required>
+            
+            <label for="days">Кількість днів:</label>
+            <input type="number" id="days" name="days" min="0" required>
+            
+            <label for="accommodation">Тип житла:</label>
+            <select id="accommodation" name="accommodation">
+                <option value="hotel">Готель</option>
+                <option value="hostel">Хостел</option>
+                <option value="apartment">Квартира</option>
+            </select>
+            
+            <fieldset>
+                <legend>Транспортний засіб</legend>
+                <label>
+                    <input type="radio" name="transportation" value="plane" required> Літак
+                </label>
+                <label>
+                    <input type="radio" name="transportation" value="train"> Потяг
+                </label>
+                <label>
+                    <input type="radio" name="transportation" value="car"> Авто
+                </label>
+            </fieldset>
+            
+            <label>
+                <input type="checkbox" id="insurance" name="insurance"> Туристичне страхування
+            </label>
+            
+            <button type="submit">Розрахувати вартість</button>
+            <button type="reset">Почати заново</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="javascript/sript.js"></script>
+</body>
+</html>
